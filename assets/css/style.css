@@ -1,0 +1,51 @@
+body{
+	width:500px;
+	height:500px;
+	padding:0;
+	margin:0;
+}
+
+#facebook-screen,#login-screen{
+	text-align: center;
+    padding-top: 200px;
+}
+
+#facebook-screen button,#login-screen button{
+	cursor: pointer;
+}
+
+.bootstrap-tagsinput input{
+	width: 446px !important;
+	border: 2px solid #d0c0d0 !important;
+    border-radius: 15px;
+    background-color: #F5F5F5;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 7px;
+}
+
+.bootstrap-tagsinput span.tag {
+    padding: 5px;
+    margin: 0 5px 0 4px;
+    border-radius: 15px;
+    background-color: #ded9de;
+    border: 1px solid #572f5b;
+    color: #572f5b;
+    font-size: 12px;
+}
+
+#post_url{
+	background-color: #ded9de;
+    border: 1px solid #572f5b;
+    color: #572f5b;
+    font-size: 12px;
+}
+
+span[data-role]{
+	margin-left: 24px;
+	cursor: pointer;
+	color: #572f5b;
+	font-size: 17px;
+	margin-right: 5px;
+}
+
