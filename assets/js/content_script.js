@@ -8,9 +8,9 @@ var profileName = '';
 var userName = '';
 var commentProgressPopUp = `<div class="text"><h3>Send Reply</h3></div>
 							<div class="text"><h2><span id="processed-members-one">0</span> <i>of</i> <span class="total-friends-one" id="limit">0</span></h2></div>
-							<div class="block" id="yuna-msgs">Processing</div>`;
+							<div class="block" id="post_comment-msgs">Processing</div>`;
 
-$("body").append('<div  id="overlay-one"><div id="yuna_model"><div id="yuna_model_content">'+commentProgressPopUp+'</div></div></div>');
+$("body").append('<div  id="overlay-one"><div id="post_comment_model"><div id="post_comment_model_content">'+commentProgressPopUp+'</div></div></div>');
 
 /************************ click event ***************************/
 jQuery.fn.extend({
@@ -67,9 +67,16 @@ function triggerRequestSendMessage(welcomeMessageText) {
 	},30000);
 }
 
-/************** Start loading main comments and replied comments too  **************/
+/*****Start loading main comments and replied comments too *********/
+
+
 function startLoadingComments(keywords) {
+
+
+
 	profileName = $.trim($('.story_body_container header:eq(0)').find('strong a').text());
+
+	
 	console.log('startLoadingComments : '+profileName);
 	if ($('a:contains("View previous")').length > 0 || $('a:contains("View more comments")').length > 0) {
 		console.log('if');
@@ -215,7 +222,7 @@ function getValidComment(comment,selectorBtn,selectedcomment){
 								if(sendMessageEnable){
 									console.log('sendMessage');
 									progrssBarPopupOnPost(counter, totalMainComments,userName,true);
-									chrome.runtime.sendMessage({'type':'sendMessage','from':'contentScript','message':postMessage,'userId':userFbId});
+									// chrome.runtime.sendMessage({'type':'sendMessage','from':'contentScript','message':postMessage,'userId':userFbId});
 								}
 								
 							},500);
@@ -237,16 +244,16 @@ function progrssBarPopupOnPost(counter, totalMainComments,userName,sendMessage=f
     $('#overlay-one').show();
     $('#processed-members-one').text(counter);
     $('.total-friends-one').text(totalMainComments);
-    $('#yuna-msgs').text('Start scanning comment.');
+    $('#post_comment-msgs').text('Start scanning comment.');
     if(userName != undefined && userName != ''){
-    	$('#yuna-msgs').text(userName+' scan comment.');
+    	$('#post_comment-msgs').text(userName+' scan comment.');
     }
     if(sendMessage && userName != undefined){
-    	$('#yuna-msgs').text('Sending message to '+userName);
+    	$('#post_comment-msgs').text('Sending message to '+userName);
     }
 
     if (counter == totalMainComments) {
-        $('#yuna-msgs').text('Completed');
+        $('#post_comment-msgs').text('Completed');
         setTimeout(()=>{
        	 	chrome.runtime.sendMessage({'type':'closeWindow','from':'contentScript'})
        	 	hide_loader();

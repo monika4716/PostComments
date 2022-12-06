@@ -16,35 +16,44 @@ body{
 
 .bootstrap-tagsinput input{
 	width: 446px !important;
-	border: 2px solid #d0c0d0 !important;
+    border: 2px solid #17a2b8 !important;
     border-radius: 15px;
-    background-color: #F5F5F5;
+    background-color: #daf0f4;
     font-size: 12px;
     margin-top: 5px;
     padding: 7px;
 }
 
+textarea{
+	border: 2px solid #17a2b8;
+}
+
+label{
+	color: #17a2b8;
+}
+
+
 .bootstrap-tagsinput span.tag {
     padding: 5px;
     margin: 0 5px 0 4px;
     border-radius: 15px;
-    background-color: #ded9de;
-    border: 1px solid #572f5b;
-    color: #572f5b;
+    background-color: #17a2b829;
+    border: 1px solid #17a2b8;
+    color: #17a2b8;
     font-size: 12px;
 }
 
 #post_url{
-	background-color: #ded9de;
-    border: 1px solid #572f5b;
-    color: #572f5b;
+	background-color: #17a2b829;
+    border: 2px solid #17a2b8;
+    color: #17a2b8;
     font-size: 12px;
 }
 
 span[data-role]{
 	margin-left: 24px;
 	cursor: pointer;
-	color: #572f5b;
+	color: #17a2b8;
 	font-size: 17px;
 	margin-right: 5px;
 }

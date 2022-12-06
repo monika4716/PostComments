@@ -27,14 +27,16 @@ chrome.runtime.onMessage.addListener(function(message,sender,senderResponse){
         console.log('closeWindow received');  
         chrome.tabs.remove(sender.tab.id);
         chrome.storage.local.set({'postStorage':''});
-    }else if(message.type == 'sendMessage' && message.from == 'contentScript'){
-        console.log('sendMessage received');
-        welcomeMessageText = message.message;
-        var userFbId = message.userId;
-        setTimeout(()=>{
-            openMessengerWindow(userFbId);
-        },500);
-    }else if(message.type == 'closeRequestMessageTab'){
+    }
+    // else if(message.type == 'sendMessage' && message.from == 'contentScript'){
+    //     console.log('sendMessage received');
+    //     welcomeMessageText = message.message;
+    //     var userFbId = message.userId;
+    //     setTimeout(()=>{
+    //         openMessengerWindow(userFbId);
+    //     },500);
+    // }
+    else if(message.type == 'closeRequestMessageTab'){
         console.log('closeRequestMessageTab received');
         chrome.tabs.remove(sender.tab.id);
     }
@@ -131,6 +133,8 @@ function openPostWindow(data){
     }else{
         console.log('post url not right');
     }
+
+    console.log(postUrl);
 
     if(postUrl != ''){
         windowSetting = {

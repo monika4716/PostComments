@@ -1,9 +1,9 @@
-#yuna_model a{  
+#post_comment_model a{  
     float: right;
     color: red;
   margin:10px;
 }
-#yuna_model{
+#post_comment_model{
   position: fixed;
   top: calc(100% - 510px);
     left: 30%;
@@ -26,24 +26,25 @@
 }
 
 
-#yuna-members{
-  color: #572f5b !important ;
+#post_comment-members{
+  color: #17a2b8 !important ;
   font-size: 50px!important;
 }
 
 .total-friends-one, #subdivision{
   margin-left: -5px;
-  color: #572f5b; 
+  color: #17a2b8; 
   
 }
 
-#yuna-msgs{
+#post_comment-msgs{
   padding-bottom: 21px !important;
   margin-top: 3%;
   margin-bottom: 5%;
+  color: #17a2b8 !important ;
 }
 
-#yuna_model_content{
+#post_comment_model_content{
   float: left;
     width: 100%;
     height: auto;
@@ -51,17 +52,17 @@
 }
 
 #processed-members-one{
-  color: #572f5b !important ;
+  color: #17a2b8 !important ;
   font-size: 50px!important;
 }
 
 .total-friends-one, #subdivision{
   margin-left: -5px;
-  color: #572f5b; 
+  color: #17a2b8; 
 }
 
-#yuna_model div{float:left;}
-#yuna_model .text{width:100%;text-align:center !important;width:100%;font-size: 20px !important;line-height: 23px;color: #000000;margin-top:14%;}
-#yuna_model .text h3{font-size: 13px !important;}
-#yuna_model .text h2{text-align:center !important;width:100%;font-size: 24px !important;line-height: 23px;color: #333333;margin-top:0;}
-#yuna_model .block{width:100%;font-size: 12px !important;line-height: 18px;text-align: center; color:#572f5b;font-weight: 500;margin-top: 4%;}
+#post_comment_model div{float:left;}
+#post_comment_model .text{width:100%;text-align:center !important;width:100%;font-size: 20px !important;line-height: 23px;color: #000000;margin-top:14%;}
+#post_comment_model .text h3{font-size: 13px !important;}
+#post_comment_model .text h2{text-align:center !important;width:100%;font-size: 24px !important;line-height: 23px;color: #333333;margin-top:0;}
+#post_comment_model .block{width:100%;font-size: 12px !important;line-height: 18px;text-align: center; color:#572f5b;font-weight: 500;margin-top: 4%;}
